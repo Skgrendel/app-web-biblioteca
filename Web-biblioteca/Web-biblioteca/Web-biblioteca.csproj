@@ -71,6 +71,7 @@
     <Content Include="image\01.jpg" />
     <Content Include="image\02.jpg" />
     <Content Include="image\03.jpg" />
+    <Content Include="image\biblioteca.png" />
     <Content Include="image\logo.svg.png" />
     <Content Include="Prestamos.aspx" />
     <Content Include="Registro_lib.aspx" />

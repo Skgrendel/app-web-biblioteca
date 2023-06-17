@@ -18,7 +18,7 @@
         <div class="Nav nav-pills">
      <nav class="navbar navbar navbar-dark bg-dark navbar-expand-lg ">
   <div class="container-fluid">
-    <a class="navbar-brand" href="Home.aspx"><img src="image/logo.svg.png"  class="img-thumbnail d-inline-block align-text-top h4" alt="Logo" width="30" height="30"/> Biblioteca - Jorge Isaacs </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="Home.aspx"><img src="image/biblioteca.png"  class="img-thumbnail d-inline-block align-text-top h4" alt="Logo" width="30" height="30"/> Biblioteca - Jorge Isaacs </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -40,15 +40,18 @@
      <%-- Cuerpo de la pagina  --%>
 <div class="card text-center">
   <div class="card-header">
-    Featured
+    Registro de Nuevos libres a la Biblioteca
   </div>
   <div class="card-body">
     <h5 class="card-title">Special title treatment</h5>
     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+      <div class="mt-5">
+          <asp:Button ID="Btn_registrar" runat="server" class="btn btn-outline-success" Text="Registrarse"   />
+           <asp:Button ID="Btn_cancelar" runat="server" class="btn btn-outline-success" Text="Cancelar"  />
+      </div> 
   </div>
   <div class="card-footer text-muted">
-    2 days ago
+      <asp:Label ID="Lbl_mensaje" runat="server" Text="Label"></asp:Label>
   </div>
 </div>
 
@@ -59,7 +62,9 @@
         <div class="container-fluid">
             <div class="row p-5 bg-dark text-white ">
                  <div class="col-xs-12 col-md-6 col-lg-3">
-                     <div class="position-absolute top-0 start-50 translate-middle"><img src="image/logo.svg.png"  class="img-thumbnail d-inline-block align-text-top" alt="Logo" width="50" height="50"/></div>
+                      <div class="position-absolute top-0 start-50 translate-middle">
+                         <asp:ImageButton ID="btn_scroll" runat="server" Cssclass="img-thumbnail d-inline-block align-text-top" alt="Logo" width="50" height="50"  ImageUrl="~/image/logo.svg.png" PostBackUrl="~/Home.aspx" /></div>
+                     <p class="h4">Centro Nacional <br />Colombo Alemán</p>
                      <p class="h4">Centro Nacional <br />Colombo Alemán</p>
                      <p class="text-secondary"> Sede Metalmecaina</p>
                  </div>
