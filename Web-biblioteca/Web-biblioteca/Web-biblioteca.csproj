@@ -73,11 +73,14 @@
     <Content Include="image\03.jpg" />
     <Content Include="image\logo.svg.png" />
     <Content Include="Prestamos.aspx" />
+    <Content Include="Registro_lib.aspx" />
     <Content Include="Registro_user.aspx" />
     <Content Include="Style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conexion\Cls_conexion.cs" />
+    <Compile Include="Datos\Cls_registrar_us.cs" />
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -93,6 +96,13 @@
       <DependentUpon>Prestamos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registro_lib.aspx.cs">
+      <DependentUpon>Registro_lib.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registro_lib.aspx.designer.cs">
+      <DependentUpon>Registro_lib.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Registro_user.aspx.cs">
       <DependentUpon>Registro_user.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

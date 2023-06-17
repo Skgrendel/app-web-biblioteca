@@ -1,22 +1,22 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="Web_biblioteca.Home" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Registro_lib.aspx.cs" Inherits="Web_biblioteca.Registro_lib" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+<link href="Style.css" rel="stylesheet" />
     <title>Biblioteca</title>   
-    <link href="Style.css" rel="stylesheet" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"/>
 </head>
 <body>
-    <form id="form1" runat="server" class="d-flex" >
-<div>
+    <form id="form1" runat="server">
+       <div>
              <%-- navegador de la pagina--%>
         <div class="Nav nav-pills">
-     <nav class="navbar navbar navbar-expand-lg navbar-dark bg-dark ">
+     <nav class="navbar navbar navbar-dark bg-dark navbar-expand-lg ">
   <div class="container-fluid">
     <a class="navbar-brand" href="Home.aspx"><img src="image/logo.svg.png"  class="img-thumbnail d-inline-block align-text-top h4" alt="Logo" width="30" height="30"/> Biblioteca - Jorge Isaacs </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -24,46 +24,36 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active"  href="Home.aspx">Home</a>
-        </li>       
+          <a class="nav-link"  href="Home.aspx">Home</a>
+        </li>        
         <li class="nav-item">
-          <a class="nav-link " href="Registro_lib.aspx">Registro de Libros</a>
+          <a class="nav-link active" aria-current="page" href="Registro_lib.aspx">Registro de Libros</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " aria-current="page" href="Prestamos.aspx">Prestamo de Libros</a>
+          <a class="nav-link " href="Prestamos.aspx">Prestamo de Libros</a>
         </li>
-      </ul> 
+      </ul>
     </div>
-       <div>
-      <asp:Button ID="Btn_regis" runat="server" Text="Registrarse" class="btn btn-outline-success" PostBackUrl="~/Registro_user.aspx" />
-    </div> 
-  </div> 
-   </nav>
-            </div>
-       <%-- Carrusel de imagenes--%>
-<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="10000">
-      <img src="image/01.jpg" class="d-block w-100" alt="..."/>
-    </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      <img src="image/02.jpg" class="d-block w-100" alt="..."/>
-    </div>
-    <div class="carousel-item">
-      <img src="image/03.jpg" class="d-block w-100" alt="..."/>
-    </div>
+  </div>    
+</nav>
+ </div>
+     <%-- Cuerpo de la pagina  --%>
+<div class="card text-center">
+  <div class="card-header">
+    Featured
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
 </div>
-      </div>
-         <%--footer de la pagina--%>
+
+        </div>
+             <%--footer de la pagina--%>
        
         <footer>       
         <div class="container-fluid">
@@ -112,9 +102,6 @@
             </div>
         
     </footer>
-        
-</form>
-    
+    </form>
 </body>
-    
 </html>

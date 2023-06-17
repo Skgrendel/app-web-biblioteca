@@ -14,15 +14,48 @@
 <body>
     <form id="form1" runat="server">
         <div>
+             <%-- navegador de la pagina--%>
+        <div class="Nav nav-pills">
+     <nav class="navbar navbar navbar-expand-lg navbar-dark bg-dark ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="Home.aspx"><img src="image/logo.svg.png"  class="img-thumbnail d-inline-block align-text-top h4" alt="Logo" width="30" height="30"/> Biblioteca - Jorge Isaacs </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link"  href="Home.aspx">Home</a>
+        </li>       
+        <li class="nav-item">
+          <a class="nav-link " href="Registro_lib.aspx">Registro de Libros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="Prestamos.aspx">Prestamo de Libros</a>
+        </li>
+      </ul>
+    </div>
+  </div>    
+</nav>
+ </div>
+        
+ <div class="container text-center">
+  <div class="row align-items-start">
+    <div class="col">
+      <p>
+
+      </p>
+    </div>
+  </div>
+</div>
         </div>
          <%--footer de la pagina--%>
-        <div>
-        <footer class="footer">       
+       
+        <footer>       
         <div class="container-fluid">
             <div class="row p-5 bg-dark text-white ">
                  <div class="col-xs-12 col-md-6 col-lg-3">
-                     <p class="h4"><img src="image/logo.svg.png"  class="img-thumbnail d-inline-block align-text-top" alt="Logo" width="40" height="40"/>
-                        Centro Nacional Colombo Alemán</p>
+                     <div class="position-absolute top-0 start-50 translate-middle"><img src="image/logo.svg.png"  class="img-thumbnail d-inline-block align-text-top" alt="Logo" width="50" height="50"/></div>
+                     <p class="h4">Centro Nacional <br />Colombo Alemán</p>
                      <p class="text-secondary"> Sede Metalmecaina</p>
                  </div>
                  <div class="col-xs-12 col-md-6 col-lg-3">
@@ -61,9 +94,10 @@
             </div>
                  </div>
           
-            </div>        
+            </div>
+        
     </footer>
-    </div>
+    
     </form>
 </body>
 </html>

@@ -33,13 +33,13 @@ namespace Web_biblioteca
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// Control TextBox1.
+        /// Control txt_id.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txt_id;
 
         /// <summary>
         /// Control Label2.
@@ -51,13 +51,13 @@ namespace Web_biblioteca
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// Control TextBox2.
+        /// Control txt_nombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox txt_nombre;
 
         /// <summary>
         /// Control Label3.
@@ -69,13 +69,13 @@ namespace Web_biblioteca
         protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// Control TextBox3.
+        /// Control txt_apellido.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox txt_apellido;
 
         /// <summary>
         /// Control Label4.
@@ -87,13 +87,13 @@ namespace Web_biblioteca
         protected global::System.Web.UI.WebControls.Label Label4;
 
         /// <summary>
-        /// Control TextBox4.
+        /// Control txt_contacto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox txt_contacto;
 
         /// <summary>
         /// Control Label5.
@@ -105,13 +105,13 @@ namespace Web_biblioteca
         protected global::System.Web.UI.WebControls.Label Label5;
 
         /// <summary>
-        /// Control TextBox5.
+        /// Control txt_direccion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox5;
+        protected global::System.Web.UI.WebControls.TextBox txt_direccion;
 
         /// <summary>
         /// Control Label6.
@@ -123,13 +123,13 @@ namespace Web_biblioteca
         protected global::System.Web.UI.WebControls.Label Label6;
 
         /// <summary>
-        /// Control TextBox6.
+        /// Control txt_correo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox6;
+        protected global::System.Web.UI.WebControls.TextBox txt_correo;
 
         /// <summary>
         /// Control Btn_registrar.
@@ -139,5 +139,23 @@ namespace Web_biblioteca
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Btn_registrar;
+
+        /// <summary>
+        /// Control Btn_cancelar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Btn_cancelar;
+
+        /// <summary>
+        /// Control Lbl_mensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Lbl_mensaje;
     }
 }

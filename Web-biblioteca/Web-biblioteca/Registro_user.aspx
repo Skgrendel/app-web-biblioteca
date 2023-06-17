@@ -14,10 +14,10 @@
 <body>
     <form id="form1" runat="server">
        <%-- navegador de la pagina--%>
-        <div class="Nav">
-     <nav class="navbar navbar navbar-expand-lg bg-body-tertiary">
+        <div class="Nav nav-pills">
+     <nav class="navbar navbar navbar-expand-lg navbar-dark bg-dark ">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="image/logo.svg.png"  class="img-thumbnail d-inline-block align-text-top h4" alt="Logo" width="30" height="30"/> Biblioteca - Jorge Isaacs </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="Home.aspx"><img src="image/logo.svg.png"  class="img-thumbnail d-inline-block align-text-top h4" alt="Logo" width="30" height="30"/> Biblioteca - Jorge Isaacs </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -27,12 +27,6 @@
         </li>
         <li class="nav-item">
           <a class="nav-link  active" aria-current="page" href="Registro_user.aspx">Creacion de Usuarios</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Registro de Libros</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="Prestamos.aspx">Prestamo de Libros</a>
         </li>
       </ul>
     </div>
@@ -53,48 +47,55 @@
         <%--Cuerpo de la pagina--%>
 
           <%--Formulario de Registro--%>
-       <center>
-        <div class="row">          
-   <div class="col-6">
-  <div class="card mb-3 ms-3" style="width: 40rem;">
+       
+        <div class="card text-center style="width: 30rem;"">
   <div class="card-header">
-   <h3>Registro de Usuarios</h3>
+    Registro de Nuevos Usuarios
   </div>
-  <div class="card-body ">    
-    <div class="mb-2"> 
+  <div class="card-body">
+    <h5 class="card-title"></h5>
+   <div class="mb-2"> 
         <div><asp:Label ID="Label1" runat="server" Text="Numero de Identificacion" class="mb-2"></asp:Label></div>
-        <asp:TextBox ID="TextBox1"  runat="server"></asp:TextBox>
+        <asp:TextBox ID="txt_id"  runat="server"></asp:TextBox>
     </div>
       <div class="mb-2">
           <div><asp:Label ID="Label2" runat="server" Text="Nombres" class="mb-2"></asp:Label></div>
-          <asp:TextBox ID="TextBox2"  runat="server"></asp:TextBox>
+          <asp:TextBox ID="txt_nombre"  runat="server"></asp:TextBox>
       </div>
       <div class="mb-2">
           <div><asp:Label ID="Label3" runat="server" Text="Apellidos" class="mb-2"></asp:Label></div>
-          <asp:TextBox ID="TextBox3"  runat="server"></asp:TextBox></div>
+          <asp:TextBox ID="txt_apellido"  runat="server"></asp:TextBox></div>
       <div class="mb-2"> 
           <div><asp:Label ID="Label4" runat="server" Text="Contacto" class="mb-2"></asp:Label></div>
-          <asp:TextBox ID="TextBox4"  runat="server"></asp:TextBox></div>
+          <asp:TextBox ID="txt_contacto"  runat="server"></asp:TextBox></div>
       <div class="mb-2"> 
           <div><asp:Label ID="Label5" runat="server" Text="Direccion" class="mb-2"></asp:Label></div>
-          <asp:TextBox ID="TextBox5"  runat="server"></asp:TextBox></div>
+          <asp:TextBox ID="txt_direccion"  runat="server"></asp:TextBox></div>
       <div class="mb-2">
           <div><asp:Label ID="Label6" runat="server" Text="Correo" class="mb-2"></asp:Label></div>
-          <asp:TextBox ID="TextBox6"  runat="server"></asp:TextBox></div>
-      <div><asp:Button ID="Btn_registrar" runat="server" Text="Registrarse" /></div>      
+          <asp:TextBox ID="txt_correo"  runat="server"></asp:TextBox></div>
+      <div class="mt-5">
+          <asp:Button ID="Btn_registrar" runat="server" class="btn btn-outline-success" Text="Registrarse"  OnClick="Btn_registrar_Click" />
+           <asp:Button ID="Btn_cancelar" runat="server" class="btn btn-outline-success" Text="Cancelar" OnClick="Btn_cancelar_Click" />
+      </div> 
+         
+          </div>     
+        </div>
+  </div>
+  <div class="card-footer text-muted text-center">
+  <div class="text-center mb-3"><asp:Label ID="Lbl_mensaje" runat="server" Text=""></asp:Label>  </div>
   </div>
 </div>
-</div>
-</div>
-</center>
+
+
       <%--footer de la pagina--%>
        
         <footer>       
         <div class="container-fluid">
             <div class="row p-5 bg-dark text-white ">
                  <div class="col-xs-12 col-md-6 col-lg-3">
-                     <p class="h4"><img src="image/logo.svg.png"  class="img-thumbnail d-inline-block align-text-top" alt="Logo" width="40" height="40"/>
-                        Centro Nacional Colombo Alemán</p>
+                     <div class="position-absolute top-0 start-50 translate-middle"><img src="image/logo.svg.png"  class="img-thumbnail d-inline-block align-text-top" alt="Logo" width="50" height="50"/></div>
+                     <p class="h4">Centro Nacional <br />Colombo Alemán</p>
                      <p class="text-secondary"> Sede Metalmecaina</p>
                  </div>
                  <div class="col-xs-12 col-md-6 col-lg-3">
