@@ -76,6 +76,7 @@
     <Content Include="Prestamos.aspx" />
     <Content Include="Registro_lib.aspx" />
     <Content Include="Registro_user.aspx" />
+    <Content Include="Seccion_libros.aspx" />
     <Content Include="Style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -110,6 +111,13 @@
     </Compile>
     <Compile Include="Registro_user.aspx.designer.cs">
       <DependentUpon>Registro_user.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Seccion_libros.aspx.cs">
+      <DependentUpon>Seccion_libros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Seccion_libros.aspx.designer.cs">
+      <DependentUpon>Seccion_libros.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

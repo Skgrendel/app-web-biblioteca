@@ -25,7 +25,10 @@
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link"  href="Home.aspx">Home</a>
-        </li>       
+        </li>   
+          <li class="nav-item">
+          <a class="nav-link " href="Seccion_libros.aspx">Seccion de Libros</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link " href="Registro_lib.aspx">Registro de Libros</a>
         </li>

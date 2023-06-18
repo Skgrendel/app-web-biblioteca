@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="Web_biblioteca.Home" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Seccion_libros.aspx.cs" Inherits="Web_biblioteca.Seccion_libros" %>
 
 <!DOCTYPE html>
 
@@ -11,9 +11,10 @@
     <link href="Style.css" rel="stylesheet" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"/>
 </head>
+
 <body>
-    <form id="form1" runat="server" class="d-flex" >
-<div>
+    <form id="form1" runat="server">
+       <div>
              <%-- navegador de la pagina--%>
         <div class="Nav nav-pills">
      <nav class="navbar navbar navbar-expand-lg navbar-dark bg-dark ">
@@ -24,42 +25,92 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active"  href="Home.aspx">Home</a>
-        </li>       
+          <a class="nav-link "  href="Home.aspx">Home</a>
+        </li>      
+          <li class="nav-item">
+          <a class="nav-link active " aria-current="page" href="Seccion_libros.aspx">Seccion de Libros</a>
+        </li>
         <li class="nav-item">
-          <a class="nav-link " href="Seccion_libros.aspx">Seccion de Libros</a>
+          <a class="nav-link " href="Registro_lib.aspx">Registro de Libros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="Prestamos.aspx">Prestamo de Libros</a>
         </li>
       </ul> 
     </div>
-       <div>
-      <asp:Button ID="Btn_regis" runat="server" Text="Registrarse" class="btn btn-outline-success" PostBackUrl="~/Registro_user.aspx" />
-    </div> 
   </div> 
    </nav>
+   </div>
+   </div>
+         <%-- Cuerpo de la pagina  --%>
+<center>
+<div class="card-group">
+  <div class="col-sm-6 mt-2">
+    <div class="card" style="width: 40rem";>
+        <div class="card-header">
+    Busqueda de libros
+  </div>
+      <div class="card-body">
+          <div class="input-group mb-3">
+              <asp:TextBox ID="txt_busqueda" runat="server" class="form-control" placeholder="Ingrese su Codigo de Busqueda ISBN"  aria-describedby="btn_buscar"></asp:TextBox>
+              <asp:Button ID="btn_buscar" runat="server" Text="Buscar" class="btn btn-outline-success"/>
+       </div>
+          <div class="row"> 
+             <%-- Columna #1--%>
+              <div class="col-sm-5">
+                  <div class="mb-2">
+               <asp:Label ID="Label1" runat="server" Text="Nombre"></asp:Label>              
+              <asp:TextBox ID="TextBox1" runat="server" Width="200" Enabled="False"></asp:TextBox>
+                  </div>
+                  <div class="mb-2">
+               <asp:Label ID="Label4" runat="server" Text="Autor"></asp:Label>              
+              <asp:TextBox ID="TextBox4" runat="server" Width="200"  Enabled="False"></asp:TextBox>
+                  </div>
+                   <div class="mb-2">
+               <asp:Label ID="Label3" runat="server" Text="Editorial"></asp:Label>              
+              <asp:TextBox ID="TextBox3" runat="server" Enabled="False"></asp:TextBox>
+                  </div>
+                     <div class="mb-2">
+               <asp:Label ID="Label5" runat="server" Text="Numero de Paginas"></asp:Label>              
+              <asp:TextBox ID="TextBox5" runat="server" Enabled="False"></asp:TextBox>
+                  </div>              
+             </div> 
+              <%-- Columna #2--%>
+              <div class="col-sm-5">
+                  <div class="mb-2">
+               <asp:Label ID="Label2" runat="server" Text="Genero"></asp:Label>              
+              <asp:TextBox ID="TextBox2" runat="server" Width="200" Enabled="False"></asp:TextBox>
+                  </div>
+                  <div class="mb-2">
+               <asp:Label ID="Label6" runat="server" Text="Fecha de publicacion"></asp:Label>              
+              <asp:TextBox ID="TextBox6" runat="server" Width="200" Enabled="False"></asp:TextBox>
+                  </div>
+                   <div class="mb-2">
+               <asp:Label ID="Label7" runat="server" Text="Estado del libro"></asp:Label>              
+              <asp:TextBox ID="TextBox7" runat="server" Enabled="False"></asp:TextBox>
+                  </div>
+                     <div class="mb-2">
+               <asp:Label ID="Label8" runat="server" Text="Cantidad Existencia"></asp:Label>              
+              <asp:TextBox ID="TextBox8" runat="server" Enabled="False"></asp:TextBox>
+                  </div>              
+             </div> 
             </div>
-       <%-- Carrusel de imagenes--%>
-<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="10000">
-      <img src="image/01.jpg" class="d-block w-100" alt="..."/>
-    </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      <img src="image/02.jpg" class="d-block w-100" alt="..."/>
-    </div>
-    <div class="carousel-item">
-      <img src="image/03.jpg" class="d-block w-100" alt="..."/>
+      </div>
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+    <div class="col-sm-6 mt-2">
+    <div class="card" style="width: 40rem";>
+        <div class="card-header text-center">
+    Portada del libro
+  </div>
+      <div class="card-body">
+          <asp:Image ID="Img_portada" runat="server" Width="300" Height="400" BorderWidth="1px" CssClass="mb-2"  />
+          
       </div>
+    </div>
+  </div>
+</div>
+    </center>
          <%--footer de la pagina--%>
        
         <footer>       
@@ -110,8 +161,6 @@
         
     </footer>
         
-</form>
-    
+    </form>
 </body>
-    
 </html>
