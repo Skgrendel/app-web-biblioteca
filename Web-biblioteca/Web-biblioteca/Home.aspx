@@ -66,7 +66,7 @@
         <div class="container-fluid">
             <div class="row p-5 bg-dark text-white ">
                  <div class="col-xs-12 col-md-6 col-lg-3">
-                     <div class="position-absolute top-0 start-30 translate-middle"><img src="image/logo.svg.png"  class="img-thumbnail d-inline-block align-text-top" alt="Logo" width="50" height="50"/></div>
+                     <div class="position-absolute top-0 start-50 translate-middle"><img src="image/logo.svg.png"  class="img-thumbnail d-inline-block align-text-top" alt="Logo" width="50" height="50"/></div>
                      <p class="h4">Centro Nacional <br />Colombo Alemán</p>
                      <p class="text-secondary"> Sede Metalmecaina</p>
                  </div>

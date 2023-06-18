@@ -43,27 +43,114 @@
 </div>
 
         
- <%-- Cuerpo de la pagina  --%>
-<div class="card text-center">
-  <div class="card-header">
-    Featured
+  <%-- Cuerpo de la pagina  --%>
+<center>
+<div class="card-group ">
+  <div class="col-sm-6 mt-2">
+    <div class="card" style="width: 40rem";>
+   <div class="card-header text-center">
+    Registro de Prestamos de libros
   </div>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+      <div class="card-body">
+          <div class="input-group mb-3">
+              <asp:TextBox ID="txt_id" runat="server" class="form-control" placeholder="Ingrese su Numero de Identificacion"  aria-describedby="btn_buscar"></asp:TextBox>
+              <asp:Button ID="btn_buscar" runat="server" Text="Buscar" class="btn btn-outline-success"/>
+       </div>
+         
+          <div class="container ">
+          <div class="row"> 
+             <%-- Columna #1--%>
+              <div class="col-sm-5 offset-1">
+                  <div class="mb-2">
+               <asp:Label ID="Label1" runat="server" Text="Nombre"></asp:Label>              
+              <asp:TextBox ID="TextBox1" runat="server" Width="200" Enabled="False"></asp:TextBox>
+                  </div>
+                  <div class="mb-2">
+               <asp:Label ID="Label4" runat="server" Text="Autor"></asp:Label>              
+              <asp:TextBox ID="TextBox4" runat="server" Width="200"  Enabled="False"></asp:TextBox>
+                  </div>
+                   <div class="mb-2">
+               <asp:Label ID="Label3" runat="server" Text="Editorial"></asp:Label>              
+              <asp:TextBox ID="TextBox3" runat="server" Enabled="False"></asp:TextBox>
+                  </div>
+                     <div class="mb-2">
+               <asp:Label ID="Label5" runat="server" Text="Numero de Paginas"></asp:Label>              
+              <asp:TextBox ID="TextBox5" runat="server" Enabled="False"></asp:TextBox>
+                  </div>              
+             </div> 
+              <%-- Columna #2--%>
+              
+              <div class="col-sm-5">
+                  <div class="mb-2">
+               <asp:Label ID="Label2" runat="server" Text="Genero"></asp:Label>              
+              <asp:TextBox ID="TextBox2" runat="server" Width="200" Enabled="False"></asp:TextBox>
+                  </div>
+                  <div class="mb-2">
+               <asp:Label ID="Label6" runat="server" Text="Fecha de publicacion"></asp:Label>              
+              <asp:TextBox ID="TextBox6" runat="server" Width="200" Enabled="False"></asp:TextBox>
+                  </div>
+                   <div class="mb-2">
+               <asp:Label ID="Label7" runat="server" Text="Estado del libro"></asp:Label>              
+              <asp:TextBox ID="TextBox7" runat="server" Enabled="False"></asp:TextBox>
+                  </div>
+                     <div class="mb-2">
+               <asp:Label ID="Label8" runat="server" Text="Cantidad Existencia"></asp:Label>              
+              <asp:TextBox ID="TextBox8" runat="server" Enabled="False"></asp:TextBox>
+                  </div>                   
+                 </div>                   
+              </div>
+      <div class="container">
+  <div class="align-items-end start-0 text-center">
+    <div class="col ">
+        <div class="mb-1">
+       <asp:Label ID="Label9" runat="server" Text="Descripcion del libro" ></asp:Label> 
+            <div class="">
+                <asp:TextBox ID="TextBox9"  runat="server" Width="500" Height="100" Enabled="False"></asp:TextBox>
+            </div>
+            <br />
+            
+            </div>
+    </div>     
   </div>
-  <div class="card-footer text-muted">
-    2 days ago
+</div> 
+ </div>
+      </div>
+    </div>
+  </div>
+   
+    <div class="col-sm-6 mt-2">
+    <div class="card" style="width: 40rem";>
+        <div class="card-header text-center">
+    Servicio de Prestamos a domicilio
+  </div>
+      <div class="card-body">
+           <p class="card-text text-start">A partir de ahora podrás acceder a nuestro servicio de préstamo a domicilio a través del Catálogo en línea cuando escojas el recurso que quieras llevar a casa. Conoce cómo haciendo clic <asp:HyperLink ID="HyperLink2" runat="server" CssClass="text-style-none" NavigateUrl="#">Aqui</asp:HyperLink>.
+
+Con este servicio gratuito puedes solicitar hasta 9 materiales, 6 libros y 3 audiovisuales de nuestro catálogo.<br /><br /> Ten en cuenta que disfrutar de nuestros servicios a domicilio es uno de los tantos beneficios que tienes por estar afiliado a la Red Distrital de Bibliotecas Públicas del Sena, si aún no lo estás, te invitamos a afiliarte haciendo clic <asp:HyperLink ID="HyperLink1" runat="server" CssClass="text-style-none" NavigateUrl="~/Registro_user.aspx">Aqui</asp:HyperLink>.<br /><br />
+
+No pierdas la oportunidad de disfrutar de más de 600 mil recursos disponibles en todas las colecciones de las Bibliotecas Públicas del Sena.<br />
+
+Para devolver el material, te ofrecemos las siguientes opciones:<br />
+
+    <br /> * Comunícate a nuestro PBX 000000 opción 1
+   <br />  * Acércate a tu biblioteca más cercana 
+   <br />  * Haz uso de los buzones de devolución de las bibliotecas 
+</p>
+<br />
+<br />
+<br />            
+      </div>
+    </div>
   </div>
 </div>
+   </center>
          <%--footer de la pagina--%>
        
         <footer>       
         <div class="container-fluid">
             <div class="row p-5 bg-dark text-white ">
                  <div class="col-xs-12 col-md-6 col-lg-3">
-                      <div class="position-absolute top-0 start-30 translate-middle">
+                      <div class="position-absolute top-0 start-50 translate-middle">
                          <asp:ImageButton ID="btn_scroll" runat="server" Cssclass="img-thumbnail d-inline-block align-text-top" alt="Logo" width="50" height="50"  ImageUrl="~/image/logo.svg.png" PostBackUrl="~/Home.aspx" /></div>
                      <p class="h4">Centro Nacional <br />Colombo Alemán</p>                    
                      <p class="text-secondary"> Sede Metalmecaina</p>

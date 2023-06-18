@@ -44,15 +44,77 @@
      <%-- Cuerpo de la pagina  --%>
 <center>
 <div class="card-group">
-  <div class="col-sm-6 mt-2">
-    <div class="card" style="width: 40rem";>
+  <div class="col-md-6 mt-2">
+    <div class="card " style="width: 40rem";>
         <div class="card-header text-center">
     Registro de Nuevos libros
   </div>
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+          <div class="mb-2">              
+              <asp:Label ID="Label10" runat="server" Text="Codigo Isbn"></asp:Label>  
+              <asp:TextBox ID="txt_busqueda" runat="server" class="form-control" Width="200"></asp:TextBox>              
+       </div>
+         
+          <div class="container ">
+          <div class="row"> 
+             <%-- Columna #1--%>
+              <div class="col-sm-5 offset-1">
+                  <div class="mb-2">
+               <asp:Label ID="Label1" runat="server" Text="Nombre"></asp:Label>              
+              <asp:TextBox ID="TextBox1" runat="server" Width="200" Enabled="true"></asp:TextBox>
+                  </div>
+                  <div class="mb-2">
+               <asp:Label ID="Label4" runat="server" Text="Autor"></asp:Label>              
+              <asp:TextBox ID="TextBox4" runat="server" Width="200"  Enabled="true"></asp:TextBox>
+                  </div>
+                   <div class="mb-2">
+               <asp:Label ID="Label3" runat="server" Text="Editorial"></asp:Label>              
+              <asp:TextBox ID="TextBox3" runat="server" Enabled="true"></asp:TextBox>
+                  </div>
+                     <div class="mb-2">
+               <asp:Label ID="Label5" runat="server" Text="Numero de Paginas"></asp:Label>              
+              <asp:TextBox ID="TextBox5" runat="server" Enabled="true"></asp:TextBox>
+                  </div>              
+             </div> 
+              <%-- Columna #2--%>
+              
+              <div class="col-sm-5">
+                  <div class="mb-2">
+               <asp:Label ID="Label2" runat="server" Text="Genero"></asp:Label>              
+              <asp:TextBox ID="TextBox2" runat="server" Width="200" Enabled="true"></asp:TextBox>
+                  </div>
+                  <div class="mb-2">
+               <asp:Label ID="Label6" runat="server" Text="Fecha de publicacion"></asp:Label>              
+              <asp:TextBox ID="TextBox6" runat="server" Width="200" Enabled="true"></asp:TextBox>
+                  </div>
+                   <div class="mb-2">
+               <asp:Label ID="Label7" runat="server" Text="Estado del libro"></asp:Label>              
+              <asp:TextBox ID="TextBox7" runat="server" Enabled="true"></asp:TextBox>
+                  </div>
+                     <div class="mb-2">
+               <asp:Label ID="Label8" runat="server" Text="Cantidad Existencia"></asp:Label>              
+              <asp:TextBox ID="TextBox8" runat="server" Enabled="true"></asp:TextBox>
+                  </div>                   
+                 </div>                   
+              </div>
+      <div class="container">
+  <div class="align-items-end start-0 text-center">
+    <div class="col ">
+        <div class="mb-3">
+       <asp:Label ID="Label9" runat="server" Text="Descripcion del libro" ></asp:Label> 
+            <div class="">
+                <asp:TextBox ID="TextBox9"  runat="server" Width="500" Height="50" Enabled="true"></asp:TextBox>                 
+            </div>            
+            </div>
+    </div>     
+  </div>
+</div> 
+<div>
+    <asp:Button ID="Button1" runat="server" Text="Registrar" class="btn btn-outline-success"/>
+    <asp:Button ID="Button2" runat="server" Text="Cancelar" class="btn btn-outline-success"/>
+</div>
+                
+ </div>
       </div>
     </div>
   </div>
@@ -75,7 +137,7 @@
         <div class="container-fluid">
             <div class="row p-5 bg-dark text-white ">
                  <div class="col-xs-12 col-md-6 col-lg-3">
-                      <div class="position-absolute top-0 start-30 translate-middle">
+                      <div class="position-absolute top-0 start-50 translate-middle">
                          <asp:ImageButton ID="btn_scroll" runat="server" Cssclass="img-thumbnail d-inline-block align-text-top" alt="Logo" width="50" height="50"  ImageUrl="~/image/logo.svg.png" PostBackUrl="~/Home.aspx" /></div>
                      <p class="h4">Centro Nacional <br />Colombo Alemán</p>                    
                      <p class="text-secondary"> Sede Metalmecaina</p>
