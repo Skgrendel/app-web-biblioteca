@@ -37,6 +37,7 @@
   </div>    
 </nav>
  </div>
+</div>
 
         
  <%-- Cuerpo de la pagina  --%>
@@ -59,10 +60,9 @@
         <div class="container-fluid">
             <div class="row p-5 bg-dark text-white ">
                  <div class="col-xs-12 col-md-6 col-lg-3">
-                      <div class="position-absolute top-0 start-50 translate-middle">
+                      <div class="position-absolute top-0 start-30 translate-middle">
                          <asp:ImageButton ID="btn_scroll" runat="server" Cssclass="img-thumbnail d-inline-block align-text-top" alt="Logo" width="50" height="50"  ImageUrl="~/image/logo.svg.png" PostBackUrl="~/Home.aspx" /></div>
-                     <p class="h4">Centro Nacional <br />Colombo Alemán</p>
-                     <p class="h4">Centro Nacional <br />Colombo Alemán</p>
+                     <p class="h4">Centro Nacional <br />Colombo Alemán</p>                    
                      <p class="text-secondary"> Sede Metalmecaina</p>
                  </div>
                  <div class="col-xs-12 col-md-6 col-lg-3">

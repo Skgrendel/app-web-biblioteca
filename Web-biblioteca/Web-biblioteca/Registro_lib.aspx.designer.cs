@@ -24,31 +24,22 @@ namespace Web_biblioteca
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Control Btn_registrar.
+        /// Control Img_portada.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Btn_registrar;
+        protected global::System.Web.UI.WebControls.Image Img_portada;
 
         /// <summary>
-        /// Control Btn_cancelar.
+        /// Control Btn_examinar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Btn_cancelar;
-
-        /// <summary>
-        /// Control Lbl_mensaje.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Lbl_mensaje;
+        protected global::System.Web.UI.WebControls.Button Btn_examinar;
 
         /// <summary>
         /// Control btn_scroll.

@@ -34,13 +34,14 @@
   </div>    
 </nav>
  </div>
+      </div>
         
 
         <%--Cuerpo de la pagina--%>
 
           <%--Formulario de Registro--%>
 
-            <div class="card text-center">
+            <div class="card text-center mb-3">
   <div class="card-header">
     <h5>Registro de Nuevos Usuarios </h5>
   </div>
@@ -66,23 +67,23 @@
       <div class="mb-2">
           <div><asp:Label ID="Label6" runat="server" Text="Correo" class="mb-2"></asp:Label></div>
           <asp:TextBox ID="txt_correo"  runat="server"></asp:TextBox></div>
-      <div class="mt-5">
+      <div class="mt-2">
           <asp:Button ID="Btn_registrar" runat="server" class="btn btn-outline-success" Text="Registrarse"  OnClick="Btn_registrar_Click" />
            <asp:Button ID="Btn_cancelar" runat="server" class="btn btn-outline-success" Text="Cancelar" OnClick="Btn_cancelar_Click" />
       </div> 
   </div>
-  <div class="card-footer text-muted">
+  <div class="card-footer text-muted ">
     <asp:Label ID="Lbl_mensaje" runat="server" Text="Bienvenidos"></asp:Label>
   </div>
 </div>
 
       <%--footer de la pagina--%>
        
-        <footer>       
+        <footer >       
         <div class="container-fluid">
             <div class="row p-5 bg-dark text-white ">
                  <div class="col-xs-12 col-md-6 col-lg-3">
-                     <div class="position-absolute top-0 start-50 translate-middle">
+                     <div class="position-absolute top-0 start-30 translate-middle">
                          <asp:ImageButton ID="btn_scroll" runat="server" Cssclass="img-thumbnail d-inline-block align-text-top" alt="Logo" width="50" height="50"  ImageUrl="~/image/logo.svg.png" PostBackUrl="~/Home.aspx" /></div>
                      <p class="h4">Centro Nacional <br />Colombo Alemán</p>
                      <p class="text-secondary"> Sede Metalmecaina</p>

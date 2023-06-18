@@ -37,35 +37,44 @@
   </div>    
 </nav>
  </div>
+</div>
      <%-- Cuerpo de la pagina  --%>
-<div class="card text-center">
-  <div class="card-header">
-    Registro de Nuevos libres a la Biblioteca
+<center>
+<div class="card-group">
+  <div class="col-sm-6 mt-2">
+    <div class="card" style="width: 40rem";>
+        <div class="card-header text-center">
+    Registro de Nuevos libros
   </div>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      <div class="mt-5">
-          <asp:Button ID="Btn_registrar" runat="server" class="btn btn-outline-success" Text="Registrarse"   />
-           <asp:Button ID="Btn_cancelar" runat="server" class="btn btn-outline-success" Text="Cancelar"  />
-      </div> 
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
   </div>
-  <div class="card-footer text-muted">
-      <asp:Label ID="Lbl_mensaje" runat="server" Text="Label"></asp:Label>
+  <div class="col-sm-6 mt-2">
+    <div class="card" style="width: 40rem";>
+        <div class="card-header text-center">
+    Portada del libro
+  </div>
+      <div class="card-body">
+          <asp:Image ID="Img_portada" runat="server" Width="300" Height="400" BorderWidth="1px" CssClass="mb-2"  />
+          <asp:Button ID="Btn_examinar" runat="server" Text="Examinar" class="d-flex align-items-center btn btn-outline-success"/>
+      </div>
+    </div>
   </div>
 </div>
-
-        </div>
+</center>"
              <%--footer de la pagina--%>
        
         <footer>       
         <div class="container-fluid">
             <div class="row p-5 bg-dark text-white ">
                  <div class="col-xs-12 col-md-6 col-lg-3">
-                      <div class="position-absolute top-0 start-50 translate-middle">
+                      <div class="position-absolute top-0 start-30 translate-middle">
                          <asp:ImageButton ID="btn_scroll" runat="server" Cssclass="img-thumbnail d-inline-block align-text-top" alt="Logo" width="50" height="50"  ImageUrl="~/image/logo.svg.png" PostBackUrl="~/Home.aspx" /></div>
-                     <p class="h4">Centro Nacional <br />Colombo Alemán</p>
-                     <p class="h4">Centro Nacional <br />Colombo Alemán</p>
+                     <p class="h4">Centro Nacional <br />Colombo Alemán</p>                    
                      <p class="text-secondary"> Sede Metalmecaina</p>
                  </div>
                  <div class="col-xs-12 col-md-6 col-lg-3">
