@@ -77,7 +77,8 @@
 </div>
  </div>
 </div>
-        <asp:Panel ID="ms_error" runat="server" Visible="False">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <asp:Panel ID="ms_error" runat="server" Visible="false">           
 <div class="col-sm-6 text-center">
     <div class="card border-warning mb-3 mt-3" style="max-width: 18rem;">
   <div class="card-header">Precaucion</div>
@@ -88,6 +89,7 @@
     </div>
    </div>
         </asp:Panel>
+         
         </div>
    </div>
         
