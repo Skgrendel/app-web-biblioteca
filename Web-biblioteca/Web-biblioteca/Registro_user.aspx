@@ -40,42 +40,57 @@
         <%--Cuerpo de la pagina--%>
 
           <%--Formulario de Registro--%>
-
-            <div class="card text-center mb-3">
-  <div class="card-header">
-    <h5>Registro de Nuevos Usuarios </h5>
-  </div>
-  <div class="card-body">
+        
+        <div class="container-fluid ">
+    <div class="row row-cols-1 row-cols-2 ">
+        <div class="col-sm-6  ">
+            <div class="float-end">
+ <div class="card mt-3 " style="max-width: 18rem;">
+  <h5 class="card-header">Registro de Nuevos  Usuarios</h5>
+   <div class="card-body">
     <h5 class="card-title"></h5>
       <div class="mb-2"> 
-        <div><asp:Label ID="Label1" runat="server" Text="Numero de Identificacion" class="mb-2"></asp:Label></div>
-        <asp:TextBox ID="txt_id"  runat="server"></asp:TextBox>
+        <div><asp:Label ID="Label1" runat="server" Text="Numero de Identificacion" class="form-label mb-2"></asp:Label></div>
+        <asp:TextBox ID="txt_id" class="form-control"  runat="server"></asp:TextBox>
     </div>
       <div class="mb-2">
-          <div><asp:Label ID="Label2" runat="server" Text="Nombres" class="mb-2"></asp:Label></div>
-          <asp:TextBox ID="txt_nombre"  runat="server"></asp:TextBox>
+          <div><asp:Label ID="Label2" runat="server" Text="Nombres" class="form-label mb-2"></asp:Label></div>
+          <asp:TextBox ID="txt_nombre" class="form-control"   runat="server"></asp:TextBox>
       </div>
       <div class="mb-2">
-          <div><asp:Label ID="Label3" runat="server" Text="Apellidos" class="mb-2"></asp:Label></div>
-          <asp:TextBox ID="txt_apellido"  runat="server"></asp:TextBox></div>
+          <div><asp:Label ID="Label3" runat="server" Text="Apellidos" for="txt_apellido" class="form-label mb-2"></asp:Label></div>
+          <asp:TextBox ID="txt_apellido" class="form-control"  runat="server"></asp:TextBox></div>
       <div class="mb-2"> 
-          <div><asp:Label ID="Label4" runat="server" Text="Contacto" class="mb-2"></asp:Label></div>
-          <asp:TextBox ID="txt_contacto"  runat="server"></asp:TextBox></div>
+          <div><asp:Label ID="Label4" runat="server" Text="Contacto" class="form-label mb-2"></asp:Label></div>
+          <asp:TextBox ID="txt_contacto" class="form-control"  runat="server"></asp:TextBox></div>
       <div class="mb-2"> 
-          <div><asp:Label ID="Label5" runat="server" Text="Direccion" class="mb-2"></asp:Label></div>
-          <asp:TextBox ID="txt_direccion"  runat="server"></asp:TextBox></div>
+          <div><asp:Label ID="Label5" runat="server" Text="Direccion" class="form-label mb-2"></asp:Label></div>
+          <asp:TextBox ID="txt_direccion" class="form-control"  runat="server"></asp:TextBox></div>
       <div class="mb-2">
-          <div><asp:Label ID="Label6" runat="server" Text="Correo" class="mb-2"></asp:Label></div>
-          <asp:TextBox ID="txt_correo"  runat="server"></asp:TextBox></div>
+          <div><asp:Label ID="Label6" runat="server" Text="Correo" class="form-label mb-2"></asp:Label></div>
+          <asp:TextBox ID="txt_correo" class="form-control"  runat="server"></asp:TextBox></div>
       <div class="mt-2">
           <asp:Button ID="Btn_registrar" runat="server" class="btn btn-outline-success" Text="Registrarse"  OnClick="Btn_registrar_Click" />
            <asp:Button ID="Btn_cancelar" runat="server" class="btn btn-outline-success" Text="Cancelar" OnClick="Btn_cancelar_Click" />
       </div> 
   </div>
-  <div class="card-footer text-muted ">
-    <asp:Label ID="Lbl_mensaje" runat="server" Text="Bienvenidos"></asp:Label>
-  </div>
 </div>
+ </div>
+</div>
+        <asp:Panel ID="ms_error" runat="server" Visible="False">
+<div class="col-sm-6 text-center">
+    <div class="card border-warning mb-3 mt-3" style="max-width: 18rem;">
+  <div class="card-header">Precaucion</div>
+  <div class="card-body">
+      <asp:Label ID="lbl_mensaje" runat="server" Text=""></asp:Label>
+   
+  </div>
+    </div>
+   </div>
+        </asp:Panel>
+        </div>
+   </div>
+        
 
       <%--footer de la pagina--%>
        

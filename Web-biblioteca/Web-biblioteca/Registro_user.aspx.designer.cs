@@ -150,13 +150,22 @@ namespace Web_biblioteca
         protected global::System.Web.UI.WebControls.Button Btn_cancelar;
 
         /// <summary>
-        /// Control Lbl_mensaje.
+        /// Control ms_error.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Lbl_mensaje;
+        protected global::System.Web.UI.WebControls.Panel ms_error;
+
+        /// <summary>
+        /// Control lbl_mensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_mensaje;
 
         /// <summary>
         /// Control btn_scroll.

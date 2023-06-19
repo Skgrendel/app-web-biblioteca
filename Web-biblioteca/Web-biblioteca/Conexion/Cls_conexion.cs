@@ -8,6 +8,6 @@ namespace Web_biblioteca.Conexion
 {
     public class Cls_conexion
     {
-        public SqlConnection con = new SqlConnection("Data Source=DESKTOP-QBO7P3V\\SQLEXPRESS;Initial Catalog=dbs_biblioteca;Integrated Security=True");
+        public SqlConnection con = new SqlConnection("Data Source=DESKTOP-2TOVKPR\\SQLEXPRESS;Initial Catalog=dbs_biblioteca;Integrated Security=True");
     }
 }
