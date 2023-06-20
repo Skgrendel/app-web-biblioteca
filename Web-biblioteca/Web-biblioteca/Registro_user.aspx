@@ -11,11 +11,11 @@
     <link href="Style.css" rel="stylesheet" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"/>
 </head>
-<body>
+<body class="bg-secondary bg-opacity-50">
     <form id="form1" runat="server">
         <div>
        <%-- navegador de la pagina--%>
-        <div class="Nav nav-pills">
+        <div class="Nav nav-pills mb-5">
      <nav class="navbar navbar navbar-expand-lg navbar-dark bg-dark ">
   <div class="container-fluid">
     <a class="navbar-brand" href="Home.aspx"><img src="image/biblioteca.png"  class="img-thumbnail d-inline-block align-text-top h4" alt="Logo" width="30" height="30"/> Biblioteca - Jorge Isaacs </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,17 +38,14 @@
         
 
         <%--Cuerpo de la pagina--%>
-
-          <%--Formulario de Registro--%>
-        
-        <div class="container-fluid ">
-    <div class="row row-cols-1 row-cols-2 ">
-        <div class="col-sm-6  ">
-            <div class="float-end">
- <div class="card mt-3 " style="max-width: 18rem;">
+        <div class="container text-center ">
+  <div class="row align-items-center">
+    <div class="col">      
+    </div>
+    <div class="col">
+        <div class="card">
   <h5 class="card-header">Registro de Nuevos  Usuarios</h5>
    <div class="card-body">
-    <h5 class="card-title"></h5>
       <div class="mb-2"> 
         <div><asp:Label ID="Label1" runat="server" Text="Numero de Identificacion" class="form-label mb-2"></asp:Label></div>
         <asp:TextBox ID="txt_id" class="form-control"  runat="server"></asp:TextBox>
@@ -75,23 +72,23 @@
       </div> 
   </div>
 </div>
- </div>
-</div>
-        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+    </div>
+    <div class="col">
+     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         <asp:Panel ID="ms_error" runat="server" Visible="false">           
 <div class="col-sm-6 text-center">
-    <div class="card border-warning mb-3 mt-3" style="max-width: 18rem;">
+    <div class="card border-warning mb-3 mt-3" style="width: 20rem;height:10rem">
   <div class="card-header">Precaucion</div>
   <div class="card-body">
       <asp:Label ID="lbl_mensaje" runat="server" Text=""></asp:Label>
-   
   </div>
     </div>
    </div>
         </asp:Panel>
-         
-        </div>
-   </div>
+    </div>
+  </div>
+</div>
+        
         
 
       <%--footer de la pagina--%>

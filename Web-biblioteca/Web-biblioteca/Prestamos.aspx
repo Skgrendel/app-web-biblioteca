@@ -74,8 +74,8 @@
               <asp:TextBox ID="TextBox3" runat="server" Enabled="False"></asp:TextBox>
                   </div>
                      <div class="mb-2">
-               <asp:Label ID="Label5" runat="server" Text="Numero de Paginas"></asp:Label>              
-              <asp:TextBox ID="TextBox5" runat="server" Enabled="False"></asp:TextBox>
+               <asp:Label ID="Label5" runat="server" Text="Fecha de Prestamo"></asp:Label>              
+              <asp:TextBox ID="Tex_fecha_e" runat="server" Enabled="true" TextMode="Date"></asp:TextBox>
                   </div>              
              </div> 
               <%-- Columna #2--%>
@@ -98,21 +98,7 @@
               <asp:TextBox ID="TextBox8" runat="server" Enabled="False"></asp:TextBox>
                   </div>                   
                  </div>                   
-              </div>
-      <div class="container">
-  <div class="align-items-end start-0 text-center">
-    <div class="col ">
-        <div class="mb-1">
-       <asp:Label ID="Label9" runat="server" Text="Descripcion del libro" ></asp:Label> 
-            <div class="">
-                <asp:TextBox ID="TextBox9"  runat="server" Width="500" Height="100" Enabled="False"></asp:TextBox>
-            </div>
-            <br />
-            
-            </div>
-    </div>     
-  </div>
-</div> 
+              </div>    
  </div>
       </div>
     </div>

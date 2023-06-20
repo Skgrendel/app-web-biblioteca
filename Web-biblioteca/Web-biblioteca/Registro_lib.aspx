@@ -9,13 +9,29 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
 <link href="Style.css" rel="stylesheet" />
     <title>Biblioteca</title>   
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"/>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"/>
+     <script>
+        function previewImage(event) {
+            var fileInput = event.target;
+            var file = fileInput.files[0];
+            var ptb_portada = document.getElementById("ptb_portada");
+
+            if (file && file.type.match("image/jpeg|image/png")) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    ptb_portada.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+     </script>
+    
 </head>
 <body>
     <form id="form1" runat="server">
        <div>
              <%-- navegador de la pagina--%>
-        <div class="Nav nav-pills">
+        <div class="Nav nav-pills mb-3">
      <nav class="navbar navbar navbar-dark bg-dark navbar-expand-lg ">
   <div class="container-fluid">
     <a class="navbar-brand" href="Home.aspx"><img src="image/biblioteca.png"  class="img-thumbnail d-inline-block align-text-top h4" alt="Logo" width="30" height="30"/> Biblioteca - Jorge Isaacs </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,16 +59,15 @@
 </div>
      <%-- Cuerpo de la pagina  --%>
 <center>
-<div class="card-group">
-  <div class="col-md-6 mt-2">
-    <div class="card " style="width: 40rem";>
-        <div class="card-header text-center">
-    Registro de Nuevos libros
+    <div clss="container-lg align-items mt-20">
+<div class="card" style="width: 40rem;">
+  <div class="card-header text-center">
+   Registro de Nuevos libros
   </div>
-      <div class="card-body">
-          <div class="mb-2">              
+  <div class="card-body">
+    <div class="mb-2">              
               <asp:Label ID="Label10" runat="server" Text="Codigo Isbn"></asp:Label>  
-              <asp:TextBox ID="txt_busqueda" runat="server" class="form-control" Width="200"></asp:TextBox>              
+              <asp:TextBox ID="txt_isbn" runat="server" class="form-control" Width="200"></asp:TextBox>              
        </div>
          
           <div class="container ">
@@ -61,19 +76,19 @@
               <div class="col-sm-5 offset-1">
                   <div class="mb-2">
                <asp:Label ID="Label1" runat="server" Text="Nombre"></asp:Label>              
-              <asp:TextBox ID="TextBox1" runat="server" Width="200" Enabled="true"></asp:TextBox>
+              <asp:TextBox ID="Txt_nombre" runat="server" Width="200" Enabled="true"></asp:TextBox>
                   </div>
                   <div class="mb-2">
                <asp:Label ID="Label4" runat="server" Text="Autor"></asp:Label>              
-              <asp:TextBox ID="TextBox4" runat="server" Width="200"  Enabled="true"></asp:TextBox>
+              <asp:TextBox ID="Txt_autor" runat="server" Width="200"  Enabled="true"></asp:TextBox>
                   </div>
                    <div class="mb-2">
                <asp:Label ID="Label3" runat="server" Text="Editorial"></asp:Label>              
-              <asp:TextBox ID="TextBox3" runat="server" Enabled="true"></asp:TextBox>
+              <asp:TextBox ID="Txt_editorial" runat="server" Enabled="true"></asp:TextBox>
                   </div>
                      <div class="mb-2">
                <asp:Label ID="Label5" runat="server" Text="Numero de Paginas"></asp:Label>              
-              <asp:TextBox ID="TextBox5" runat="server" Enabled="true"></asp:TextBox>
+              <asp:TextBox ID="Txt_n_paginas" runat="server" Enabled="true"></asp:TextBox>
                   </div>              
              </div> 
               <%-- Columna #2--%>
@@ -81,19 +96,19 @@
               <div class="col-sm-5">
                   <div class="mb-2">
                <asp:Label ID="Label2" runat="server" Text="Genero"></asp:Label>              
-              <asp:TextBox ID="TextBox2" runat="server" Width="200" Enabled="true"></asp:TextBox>
+              <asp:TextBox ID="Txt_genero" runat="server" Width="200" Enabled="true"></asp:TextBox>
                   </div>
                   <div class="mb-2">
                <asp:Label ID="Label6" runat="server" Text="Fecha de publicacion"></asp:Label>              
-              <asp:TextBox ID="TextBox6" runat="server" Width="200" Enabled="true"></asp:TextBox>
+              <asp:TextBox ID="Txt_f_publicacion" runat="server" Width="200" Enabled="true" TextMode="Date"></asp:TextBox>
                   </div>
                    <div class="mb-2">
                <asp:Label ID="Label7" runat="server" Text="Estado del libro"></asp:Label>              
-              <asp:TextBox ID="TextBox7" runat="server" Enabled="true"></asp:TextBox>
+                       <asp:DropDownList ID="cbx_estado" runat="server" Width="200"></asp:DropDownList>
                   </div>
                      <div class="mb-2">
                <asp:Label ID="Label8" runat="server" Text="Cantidad Existencia"></asp:Label>              
-              <asp:TextBox ID="TextBox8" runat="server" Enabled="true"></asp:TextBox>
+              <asp:TextBox ID="Txt_cantidad" runat="server" Enabled="true"></asp:TextBox>
                   </div>                   
                  </div>                   
               </div>
@@ -103,34 +118,21 @@
         <div class="mb-3">
        <asp:Label ID="Label9" runat="server" Text="Descripcion del libro" ></asp:Label> 
             <div class="">
-                <asp:TextBox ID="TextBox9"  runat="server" Width="500" Height="50" Enabled="true"></asp:TextBox>                 
+                <asp:TextBox ID="Txt_descripcion"  runat="server" Width="460" Height="300" Enabled="true" TextMode="MultiLine"></asp:TextBox>                 
             </div>            
             </div>
     </div>     
   </div>
 </div> 
-<div>
-    <asp:Button ID="Button1" runat="server" Text="Registrar" class="btn btn-outline-success"/>
+<div class="mt-2">
+    <asp:Button ID="Button1" runat="server" Text="Registrar" class="btn btn-outline-success" OnClick="Button1_Click"/>
     <asp:Button ID="Button2" runat="server" Text="Cancelar" class="btn btn-outline-success"/>
-</div>
-                
+</div>         
  </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-6 mt-2">
-    <div class="card" style="width: 40rem";>
-        <div class="card-header text-center">
-    Portada del libro
-  </div>
-      <div class="card-body">
-          <asp:Image ID="Img_portada" runat="server" Width="300" Height="400" BorderWidth="1px" CssClass="mb-2"  />
-          <asp:Button ID="Btn_examinar" runat="server" Text="Examinar" class="d-flex align-items-center btn btn-outline-success"/>
-      </div>
-    </div>
-  </div>
 </div>
-</center>"
+    </div>
+      </div>    
+</center>
              <%--footer de la pagina--%>
        
         <footer>       

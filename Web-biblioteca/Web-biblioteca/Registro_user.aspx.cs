@@ -8,7 +8,7 @@ namespace Web_biblioteca
 {
     public partial class Registro_user : System.Web.UI.Page
     {
-        private string str_mensaje;
+       
         protected void Page_Load(object sender, EventArgs e)
         {
 

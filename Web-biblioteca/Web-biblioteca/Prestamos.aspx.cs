@@ -11,7 +11,11 @@ namespace Web_biblioteca
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                Tex_fecha_e.Text = DateTime.Now.ToString("yyyy-MM-dd");
+            }
+            
         }
     }
 }
