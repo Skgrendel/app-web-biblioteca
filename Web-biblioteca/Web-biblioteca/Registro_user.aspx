@@ -15,7 +15,7 @@
     <form id="form1" runat="server">
         <div>
        <%-- navegador de la pagina--%>
-        <div class="Nav nav-pills mb-5">
+        <div class="Nav nav-pills mb-3">
      <nav class="navbar navbar navbar-expand-lg navbar-dark bg-dark ">
   <div class="container-fluid">
     <a class="navbar-brand" href="Home.aspx"><img src="image/biblioteca.png"  class="img-thumbnail d-inline-block align-text-top h4" alt="Logo" width="30" height="30"/> Biblioteca - Jorge Isaacs </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

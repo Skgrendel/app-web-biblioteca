@@ -119,7 +119,6 @@
     </div>
     </div>
     <div class="col">
-      One of three columns
     </div>
   </div>
 </div>

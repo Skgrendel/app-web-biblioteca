@@ -17,3 +17,12 @@
 .cb1{
     background-color: rgba(225,225,225,0.1 )
 }
+body
+{
+margin:0;
+position:relative;
+padding-bottom: 6em;
+min-height:100vh;
+
+
+}
