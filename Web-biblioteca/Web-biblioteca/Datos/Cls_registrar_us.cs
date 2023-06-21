@@ -12,6 +12,7 @@ namespace Web_biblioteca.Datos
     {
         Cls_conexion objconect = new Cls_conexion();
         private string str_mensaje;
+        private int existencia;
         public void fnt_crear(string id, string nombres, string apellidos, string contacto, string direccion, string correo)
         {
             if (id == "" || nombres == "" || apellidos == "" || contacto == "" || direccion == "" || correo == "")
@@ -27,7 +28,7 @@ namespace Web_biblioteca.Datos
                     cmdValidar.CommandType = CommandType.StoredProcedure;
                     cmdValidar.Parameters.AddWithValue("@id", id);
                     objconect.con.Open();
-                    int existencia = (int)cmdValidar.ExecuteScalar();
+                    existencia = (int)cmdValidar.ExecuteScalar();
                     objconect.con.Close();
 
                     if (existencia > 0)
@@ -60,5 +61,6 @@ namespace Web_biblioteca.Datos
 
 
         public string getMensaje() { return this.str_mensaje; }
+        public int getExistencia() { return this.existencia; }
     }
 }

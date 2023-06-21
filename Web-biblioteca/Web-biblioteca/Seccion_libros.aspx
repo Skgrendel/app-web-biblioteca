@@ -56,7 +56,7 @@
     <div class="mb-2">  
               <div class="input-group mb-3" width="400" role="search">
                <asp:TextBox ID="txt_busqueda" runat="server" class="form-control" placeholder="Ingrese su Codigo de Busqueda ISBN" Width="500"  aria-describedby="btn_buscar"></asp:TextBox>
-                <asp:Button ID="btn_buscar" runat="server" Text="Buscar" class="btn btn-outline-success"/>  
+                <asp:Button ID="btn_buscar" runat="server" Text="Buscar" class="btn btn-outline-success" OnClick="btn_buscar_Click"/>  
                   </div>
        </div>
          
@@ -78,7 +78,7 @@
                   </div>
                      <div class="mb-2">
                <asp:Label ID="Label5" runat="server" Text="Numero de Paginas"></asp:Label>              
-              <asp:TextBox ID="Txt_n_paginas" runat="server" Enabled="false"></asp:TextBox>
+              <asp:TextBox ID="Txt_n_paginas" runat="server" Enabled="false" Text="0"></asp:TextBox>
                   </div>              
              </div> 
               <%-- Columna #2--%>
@@ -90,7 +90,7 @@
                   </div>
                   <div class="mb-2">
                <asp:Label ID="Label6" runat="server" Text="Fecha de publicacion"></asp:Label>              
-              <asp:TextBox ID="Txt_f_publicacion" runat="server" Width="200" Enabled="false" TextMode="Date"></asp:TextBox>
+              <asp:TextBox ID="Txt_f_publicacion" runat="server" Width="200" Enabled="false" TextMode="DateTime"></asp:TextBox>
                   </div>
                    <div class="mb-2">
                <asp:Label ID="Label7" runat="server" Text="Estado del libro"></asp:Label>              
@@ -98,7 +98,7 @@
                   </div>
                      <div class="mb-2">
                <asp:Label ID="Label8" runat="server" Text="Cantidad Existencia"></asp:Label>              
-              <asp:TextBox ID="Txt_cantidad" runat="server" Enabled="false"></asp:TextBox>
+              <asp:TextBox ID="Txt_cantidad" runat="server" Enabled="false" Text="0"></asp:TextBox>
                   </div>                   
                  </div>                   
               </div>
@@ -119,6 +119,17 @@
     </div>
     </div>
     <div class="col">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <asp:Panel ID="ms_error" runat="server" Visible="false">           
+<div class="col-sm-6 text-center">
+    <div class="card border-warning mb-3 mt-3" style="width: 20rem;height:10rem">
+  <div class="card-header">Precaucion</div>
+  <div class="card-body">
+      <asp:Label ID="lbl_mensaje" runat="server" Text=""></asp:Label>
+  </div>
+    </div>
+   </div>
+        </asp:Panel>
     </div>
   </div>
 </div>

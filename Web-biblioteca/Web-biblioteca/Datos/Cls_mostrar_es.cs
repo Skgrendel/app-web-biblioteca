@@ -11,8 +11,7 @@ namespace Web_biblioteca.Datos
 {
     public class Cls_mostrar_es
     {
-        SqlCommand con;
-        SqlDataReader rdr;
+       
         private DataTable dt;
         Cls_conexion conn = new Cls_conexion();
 

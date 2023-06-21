@@ -40,12 +40,28 @@ namespace Web_biblioteca
                     fnt_cancelar();
         } 
 
-        protected void Btn_registrar_Click(object sender, EventArgs e)
+        void fnt_registrar()
         {
             Cls_registrar_us registrar_Us = new Cls_registrar_us();
-            registrar_Us.fnt_crear(txt_id.Text, txt_nombre.Text, txt_apellido.Text, txt_contacto.Text, txt_direccion.Text, txt_correo.Text);
-            lbl_mensaje.Text = registrar_Us.getMensaje();
-            script();
+            if (registrar_Us.getExistencia() > 0)
+            {
+                lbl_mensaje.Text = registrar_Us.getMensaje();
+                script();
+            }
+            else
+            {
+                registrar_Us.fnt_crear(txt_id.Text, txt_nombre.Text, txt_apellido.Text, txt_contacto.Text, txt_direccion.Text, txt_correo.Text);
+                lbl_mensaje.Text = registrar_Us.getMensaje();
+                script();
+                fnt_cancelar();
+
+            }
+        }
+        protected void Btn_registrar_Click(object sender, EventArgs e)
+        {
+
+            fnt_registrar();
+           
             
         }
         protected void Btn_cancelar_Click(object sender, EventArgs e)
