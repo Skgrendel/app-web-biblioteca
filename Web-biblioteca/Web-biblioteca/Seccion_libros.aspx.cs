@@ -19,13 +19,12 @@ namespace Web_biblioteca
         }
         void script()
         {
-            ms_error.Visible = true;
-            string script = @"window.setTimeout(function() {
-                 document.getElementById('" + ms_error.ClientID + @"').style.display = 'none';
-                 }, 4000);";
-            ScriptManager.RegisterStartupScript(this, GetType(), "HideErrorPanel", script, true); // Ocultar el panel de error después de 3 segundos
-            
-        }
+           
+            //string script = @"window.setTimeout(function() {
+            //     document.getElementById('" + ms_error.ClientID + @"').style.display = 'none';
+            //     }, 3000);";
+            //ScriptManager.RegisterStartupScript(this, GetType(), "HideErrorPanel", script, true); // Ocultar el panel de error después de 3 segundos
+            }
         private void CargarEstados()
         {
             Cls_mostrar_es Mostrar_Es = new Cls_mostrar_es();
@@ -40,11 +39,16 @@ namespace Web_biblioteca
 
             
             Cls_consultar_lib consultar_Lib = new Cls_consultar_lib();
-                consultar_Lib.fnt_consultar(txt_busqueda.Text);
+            consultar_Lib.fnt_consultar(txt_busqueda.Text);
 
             if (consultar_Lib.getexistencia() < 1)
             {
-                script();
+                //script();
+                string script = @"window.setTimeout(function() {
+                 document.getElementById('" + ms_error.ClientID + @"').style.display = 'none';
+                 }, 3000);";
+                ScriptManager.RegisterStartupScript(this, GetType(), "HideErrorPanel", script, true);
+                ms_error.Visible = true;
                 lbl_mensaje.Text = consultar_Lib.getmensaje();
 
             }
