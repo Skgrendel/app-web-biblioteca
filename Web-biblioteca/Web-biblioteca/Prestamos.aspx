@@ -44,67 +44,56 @@
 
         
   <%-- Cuerpo de la pagina  --%>
-<center>
-<div class="card-group ">
-  <div class="col-sm-6 mt-2">
+
+<div class="row">
+  <div class="col-6 d-flex justify-content-center row mt-2">
     <div class="card" style="width: 40rem";>
    <div class="card-header text-center">
     Registro de Prestamos de libros
   </div>
       <div class="card-body">
-          <div class="input-group mb-3">
-              <asp:TextBox ID="txt_id" runat="server" class="form-control" placeholder="Ingrese su Numero de Identificacion"  aria-describedby="btn_buscar"></asp:TextBox>
-              <asp:Button ID="btn_buscar" runat="server" Text="Buscar" class="btn btn-outline-success"/>
+          <div class="container me-2">             
+          <div class=" d-flex justify-content-center mb-3">
+               <asp:TextBox ID="txt_id" runat="server" class="form-control me-2" Width="250px" placeholder="Identificacion"/>
+              <asp:TextBox ID="Txt_nombre" runat="server" class="form-control me-2 text-center" Width="250px" placeholder="Nombre" Enabled="false"/>
+              <asp:Button ID="btn_buscar" runat="server" Text="Buscar" class="btn btn-outline-success  ms-2" OnClick="btn_buscar_Click" />
        </div>
-         
-          <div class="container ">
-          <div class="row"> 
-             <%-- Columna #1--%>
-              <div class="col-sm-5 offset-1">
-                  <div class="mb-2">
-               <asp:Label ID="Label1" runat="server" Text="Nombre"></asp:Label>              
-              <asp:TextBox ID="TextBox1" runat="server" Width="200" Enabled="False"></asp:TextBox>
-                  </div>
-                  <div class="mb-2">
-               <asp:Label ID="Label4" runat="server" Text="Autor"></asp:Label>              
-              <asp:TextBox ID="TextBox4" runat="server" Width="200"  Enabled="False"></asp:TextBox>
-                  </div>
-                   <div class="mb-2">
-               <asp:Label ID="Label3" runat="server" Text="Editorial"></asp:Label>              
-              <asp:TextBox ID="TextBox3" runat="server" Enabled="False"></asp:TextBox>
-                  </div>
-                     <div class="mb-2">
-               <asp:Label ID="Label5" runat="server" Text="Fecha de Prestamo"></asp:Label>              
-              <asp:TextBox ID="Tex_fecha_e" runat="server" Enabled="true" TextMode="Date"></asp:TextBox>
-                  </div>              
-             </div> 
-              <%-- Columna #2--%>
-              
-              <div class="col-sm-5">
-                  <div class="mb-2">
-               <asp:Label ID="Label2" runat="server" Text="Genero"></asp:Label>              
-              <asp:TextBox ID="TextBox2" runat="server" Width="200" Enabled="False"></asp:TextBox>
-                  </div>
-                  <div class="mb-2">
-               <asp:Label ID="Label6" runat="server" Text="Fecha de publicacion"></asp:Label>              
-              <asp:TextBox ID="TextBox6" runat="server" Width="200" Enabled="False"></asp:TextBox>
-                  </div>
-                   <div class="mb-2">
-               <asp:Label ID="Label7" runat="server" Text="Estado del libro"></asp:Label>              
-              <asp:TextBox ID="TextBox7" runat="server" Enabled="False"></asp:TextBox>
-                  </div>
-                     <div class="mb-2">
-               <asp:Label ID="Label8" runat="server" Text="Cantidad Existencia"></asp:Label>              
-              <asp:TextBox ID="TextBox8" runat="server" Enabled="False"></asp:TextBox>
-                  </div>                   
-                 </div>                   
-              </div>    
- </div>
+          <div class="d-flex justify-content-center mb-3">
+              <asp:TextBox ID="Txt_isbn" runat="server" class="form-control me-2" Width="250px" placeholder="Isbn del libro"/>
+              <asp:TextBox ID="Txt_nombre_lib" runat="server" class="form-control me-2" Width="250px" placeholder="Nombre del libro" Enabled="false"/>
+              <asp:Button ID="Btn_buscar_lib" runat="server" Text="Buscar" class="btn btn-outline-success ms-2" OnClick="Btn_buscar_lib_Click" />
+       </div>
+               <div class="d-flex justify-content-left  mb-3">              
+              <asp:TextBox ID="Txt_autor" runat="server" class="form-control ps-4" Width="380px" placeholder="Autor" Enabled="false"/>
+              <asp:TextBox ID="Txt_existencias" runat="server" class="form-control ms-2" Width="100px" placeholder="Existencias" Enabled="false"/>
+                   
+       </div>
+              </div>
+        <div class="container text-center">
+             <div class="row align-items-center">
+             <div class="col">
+             <asp:Label ID="Label4" runat="server" Text="Cantidad" CssClass="form-label"></asp:Label>
+               <asp:TextBox ID="Txt_cantidad" runat="server" class="form-control ms-2"  placeholder="" Enabled="true" Text="0" /> 
+             </div>
+             <div class="col">
+             <asp:Label ID="Label1" runat="server" Text="Fecha final del prestamo" CssClass="form-label"></asp:Label>
+              <asp:TextBox ID="Txt_fecha" runat="server" class="form-control" Enabled="true" TextMode="Date" Width="250px" />
+          </div>
+             </div>
+             </div>          
+                </div> 
+        <div class="d-flex align-items-center align-text-top">
+              <asp:Label ID="lbl_mensaje" runat="server" Text="" CssClass="h2 text-center" Visible="false"></asp:Label>
+          </div>
+              <div class="d-flex justify-content-center mb-3"> 
+              <asp:Button ID="Btn_nuevo" runat="server" Text="Nuevo" class="btn btn-outline-success" OnClick="Btn_nuevo_Click"/>
+              <asp:Button ID="Btn_registrar" runat="server" Text="Registrar" class="btn btn-outline-success  ms-2" OnClick="Btn_registrar_Click"/>
+          </div>
       </div>
-    </div>
+   
   </div>
    
-    <div class="col-sm-6 mt-2">
+    <div class="col-5 d-flex justify-content-center row mt-2">
     <div class="card" style="width: 40rem";>
         <div class="card-header text-center">
     Servicio de Prestamos a domicilio
@@ -129,7 +118,7 @@ Para devolver el material, te ofrecemos las siguientes opciones:<br />
     </div>
   </div>
 </div>
-   </center>
+   
          <%--footer de la pagina--%>
        
         <footer>       

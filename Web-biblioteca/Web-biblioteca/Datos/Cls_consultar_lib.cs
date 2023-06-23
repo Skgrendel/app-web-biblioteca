@@ -38,8 +38,8 @@ namespace Web_biblioteca.Datos
                 objconect.con.Open();
                 existencia = (int)cmdValidar.ExecuteScalar();
                 objconect.con.Close();
-
-                if (existencia < 1 )
+                
+                if (existencia == 0 )
                 {
                     str_mensaje = "El libro con ISBN " + isbn + " No está registrado";
                 }

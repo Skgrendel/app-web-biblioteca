@@ -20,10 +20,10 @@ namespace Web_biblioteca
         void script()
         {
            
-            //string script = @"window.setTimeout(function() {
-            //     document.getElementById('" + ms_error.ClientID + @"').style.display = 'none';
-            //     }, 3000);";
-            //ScriptManager.RegisterStartupScript(this, GetType(), "HideErrorPanel", script, true); // Ocultar el panel de error después de 3 segundos
+            string script = @"window.setTimeout(function() {
+                 document.getElementById('" + ms_error.ClientID + @"').style.display = 'none';
+                 }, 3000);";
+            ScriptManager.RegisterStartupScript(this, GetType(), "HideErrorPanel", script, true); // Ocultar el panel de error después de 3 segundos
             }
         private void CargarEstados()
         {
@@ -34,6 +34,22 @@ namespace Web_biblioteca
             cbx_estado.DataTextField = "Nombre";
             cbx_estado.DataBind();
         }
+       
+            void limpiar()
+            {                
+                Txt_autor.Text = string.Empty;
+                Txt_cantidad.Text = "0";
+                Txt_descripcion.Text = string.Empty;
+                Txt_editorial.Text = string.Empty;
+                Txt_f_publicacion.Text = string.Empty;
+                Txt_genero.Text = string.Empty;
+                Txt_nombre.Text = string.Empty;
+                Txt_n_paginas.Text = "0";
+                cbx_estado.SelectedIndex = 0;
+                txt_busqueda.Focus();
+            }
+
+       
         private void fnt_consultar()
         {
 
@@ -41,15 +57,12 @@ namespace Web_biblioteca
             Cls_consultar_lib consultar_Lib = new Cls_consultar_lib();
             consultar_Lib.fnt_consultar(txt_busqueda.Text);
 
-            if (consultar_Lib.getexistencia() < 1)
+            if (consultar_Lib.getexistencia() == 0)
             {
-                //script();
-                string script = @"window.setTimeout(function() {
-                 document.getElementById('" + ms_error.ClientID + @"').style.display = 'none';
-                 }, 3000);";
-                ScriptManager.RegisterStartupScript(this, GetType(), "HideErrorPanel", script, true);
-                ms_error.Visible = true;
+                script();               
                 lbl_mensaje.Text = consultar_Lib.getmensaje();
+
+                //limpiar();
 
             }
             else
