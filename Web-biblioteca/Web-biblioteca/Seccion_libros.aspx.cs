@@ -13,6 +13,7 @@ namespace Web_biblioteca
     {
         private int val;
         private bool editar;
+        private string str_mensaje;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack == true)
@@ -98,18 +99,17 @@ namespace Web_biblioteca
         }
         protected void btn_buscar_Click(object sender, EventArgs e)
         {
-            fnt_consultar();
-            
-           
-           
+            fnt_consultar();          
         }
         void habilitar()
         {
+            script();
             txt_busqueda.Enabled = false;
             Txt_nombre.Enabled = true;
             Txt_genero.Enabled = true;
             Txt_autor.Enabled = true;
             Txt_f_publicacion.Enabled = true;
+            Txt_f_publicacion.TextMode = TextBoxMode.Date;
             Txt_editorial.Enabled = true;
             cbx_estado.Enabled = true;
             Txt_n_paginas.Enabled = true;
@@ -125,6 +125,7 @@ namespace Web_biblioteca
             Txt_genero.Enabled = false;
             Txt_autor.Enabled = false;
             Txt_f_publicacion.Enabled = false;
+            Txt_f_publicacion.TextMode = TextBoxMode.DateTime;
             Txt_editorial.Enabled = false;
             cbx_estado.Enabled = false;
             Txt_n_paginas.Enabled = false;
@@ -136,14 +137,17 @@ namespace Web_biblioteca
         protected void Btn_editar_Click(object sender, EventArgs e)
         {
             Cls_editar_lib editar_Lib = new Cls_editar_lib();
+            editar_Lib.fnt_crear(txt_busqueda.Text, Txt_nombre.Text, Txt_autor.Text, Txt_editorial.Text, Convert.ToInt16(Txt_n_paginas.Text), cbx_estado.SelectedValue, Txt_genero.Text, Txt_f_publicacion.Text, Convert.ToInt16(Txt_cantidad.Text), Txt_descripcion.Text);
             
-            if (val==1)
-            {
-                editar_Lib.fnt_crear(txt_busqueda.Text, Txt_nombre.Text, Txt_autor.Text, Txt_editorial.Text, Convert.ToInt16(Txt_n_paginas.Text), cbx_estado.SelectedValue, Txt_genero.Text, Txt_f_publicacion.Text, Convert.ToInt16(Txt_cantidad.Text), Txt_descripcion.Text);
+
+            
                 script();
-                lbl_mensaje.Text = editar_Lib.getMensaje();
+                str_mensaje = editar_Lib.getMensaje();
                 ms_error.Visible = true;
-            }
+                lbl_mensaje.Text = str_mensaje;
+
+                  
+            
             
         }
 
@@ -152,10 +156,12 @@ namespace Web_biblioteca
             if (Cb_editar.Checked==true)
             {
                 habilitar();
+                               
             }
             else
             {
                 inahilitar();
+                ms_error.Visible = false;
             }
             
         }

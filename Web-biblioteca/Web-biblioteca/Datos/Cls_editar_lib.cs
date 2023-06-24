@@ -12,12 +12,14 @@ namespace Web_biblioteca.Datos
     {
         Cls_conexion objconect = new Cls_conexion();
         private string str_mensaje;
-        private int existencia;
+        private int exi;
         public void fnt_crear(string isbn, string nombres, string autor, string editorial, int num_p, string estado, string genero, string fecha_p, int canti, string descripcion)
         {
             if (isbn == "" || nombres == "" || autor == "" || editorial == "" || num_p <= 0 || genero == "" || canti <= 0 || descripcion == "")
             {
+                exi = 1;
                 str_mensaje = "Debe ingresar todos los datos solicitados";
+                
             }
             else
             {        // Validar si el libro ya está registrado
@@ -44,5 +46,6 @@ namespace Web_biblioteca.Datos
         }
 
         public string getMensaje() { return this.str_mensaje; }
+        public int getExi() { return this.exi; }
     }
 }
