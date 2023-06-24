@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.EnterpriseServices;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -10,21 +11,29 @@ namespace Web_biblioteca
 {
     public partial class Seccion_libros : System.Web.UI.Page
     {
+        private int val;
+        private bool editar;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack == true)
             {
                 CargarEstados();
+
             }
         }
         void script()
         {
-           
-            string script = @"window.setTimeout(function() {
+          
+            
+                string script = @"window.setTimeout(function() {
                  document.getElementById('" + ms_error.ClientID + @"').style.display = 'none';
                  }, 3000);";
-            ScriptManager.RegisterStartupScript(this, GetType(), "HideErrorPanel", script, true); // Ocultar el panel de error después de 3 segundos
-            }
+                ScriptManager.RegisterStartupScript(this, GetType(), "HideErrorPanel", script, true); // Ocultar el panel de error después de 3 segundos
+            
+           
+            
+         }
+
         private void CargarEstados()
         {
             Cls_mostrar_es Mostrar_Es = new Cls_mostrar_es();
@@ -56,18 +65,20 @@ namespace Web_biblioteca
             
             Cls_consultar_lib consultar_Lib = new Cls_consultar_lib();
             consultar_Lib.fnt_consultar(txt_busqueda.Text);
+            val = consultar_Lib.getexistencia();
 
-            if (consultar_Lib.getexistencia() == 0)
+            if (val == 0)
             {
                 script();               
                 lbl_mensaje.Text = consultar_Lib.getmensaje();
+                ms_error.Visible = true;
+               
 
                 //limpiar();
-
             }
-            else
+            if (val == 1)
             {
-                
+                ms_error.Visible = false;               
                 Txt_nombre.Text = consultar_Lib.getnombre();
                 Txt_autor.Text = consultar_Lib.getautor();
                 Txt_editorial.Text = consultar_Lib.geteditorial();
@@ -76,17 +87,77 @@ namespace Web_biblioteca
                 Txt_f_publicacion.Text = consultar_Lib.getfecha_p();
                 cbx_estado.SelectedItem.Text = Convert.ToString(consultar_Lib.getestado());
                 Txt_cantidad.Text = Convert.ToString(consultar_Lib.getcantidad());
-                Txt_descripcion.Text = consultar_Lib.getdescripcion();
+                Txt_descripcion.Text = consultar_Lib.getdescripcion();               
+                Cb_editar.Enabled = true;
+
+
             }
-            
-           
+
+
 
         }
         protected void btn_buscar_Click(object sender, EventArgs e)
         {
             fnt_consultar();
+            
            
            
+        }
+        void habilitar()
+        {
+            txt_busqueda.Enabled = false;
+            Txt_nombre.Enabled = true;
+            Txt_genero.Enabled = true;
+            Txt_autor.Enabled = true;
+            Txt_f_publicacion.Enabled = true;
+            Txt_editorial.Enabled = true;
+            cbx_estado.Enabled = true;
+            Txt_n_paginas.Enabled = true;
+            Txt_cantidad.Enabled = true;
+            Txt_descripcion.Enabled = true;
+            Btn_editar.Enabled = true;
+        }
+
+        void inahilitar()
+        {
+            txt_busqueda.Enabled = true;
+            Txt_nombre.Enabled = false;
+            Txt_genero.Enabled = false;
+            Txt_autor.Enabled = false;
+            Txt_f_publicacion.Enabled = false;
+            Txt_editorial.Enabled = false;
+            cbx_estado.Enabled = false;
+            Txt_n_paginas.Enabled = false;
+            Txt_cantidad.Enabled = false;
+            Txt_descripcion.Enabled = false;            
+            Btn_editar.Enabled = false;
+        }
+
+        protected void Btn_editar_Click(object sender, EventArgs e)
+        {
+            Cls_editar_lib editar_Lib = new Cls_editar_lib();
+            
+            if (val==1)
+            {
+                editar_Lib.fnt_crear(txt_busqueda.Text, Txt_nombre.Text, Txt_autor.Text, Txt_editorial.Text, Convert.ToInt16(Txt_n_paginas.Text), cbx_estado.SelectedValue, Txt_genero.Text, Txt_f_publicacion.Text, Convert.ToInt16(Txt_cantidad.Text), Txt_descripcion.Text);
+                script();
+                lbl_mensaje.Text = editar_Lib.getMensaje();
+                ms_error.Visible = true;
+            }
+            
+        }
+
+        protected void Cb_editar_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Cb_editar.Checked==true)
+            {
+                habilitar();
+            }
+            else
+            {
+                inahilitar();
+            }
+            
         }
     }
 }

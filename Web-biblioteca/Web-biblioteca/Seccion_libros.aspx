@@ -54,10 +54,18 @@
   </div>
   <div class="card-body">
     <div class="mb-2">  
-              <div class="input-group mb-3" width="400" role="search">
-               <asp:TextBox ID="txt_busqueda" runat="server" class="form-control" placeholder="Ingrese su Codigo de Busqueda ISBN" Width="500"  aria-describedby="btn_buscar"></asp:TextBox>
+        <center>
+              <div class="container mb-3 " width="400" role="search">
+               <asp:TextBox ID="txt_busqueda" runat="server" class="btn-outline-success" placeholder="Ingrese su Codigo de Busqueda ISBN" Width="300"  aria-describedby="btn_buscar"></asp:TextBox>
                 <asp:Button ID="btn_buscar" runat="server" Text="Buscar" class="btn btn-outline-success" OnClick="btn_buscar_Click"/>  
+                  <asp:Button ID="Btn_editar" runat="server" Text="Editar" class="btn btn-outline-success" OnClick="Btn_editar_Click" Enabled="False" />                  
                   </div>
+            </center>
+        <div>
+         <asp:Label ID="Label10" runat="server" Text="Desea Editar Selecione Aqui --->"></asp:Label>
+        <asp:CheckBox ID="Cb_editar" runat="server" Enabled="False" AutoPostBack="True" OnCheckedChanged="Cb_editar_CheckedChanged" />
+        </div>
+         
        </div>
          
           <div class="container ">

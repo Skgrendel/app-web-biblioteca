@@ -14,7 +14,7 @@ namespace Web_biblioteca
         {
             if (!IsPostBack)
             {
-                //Tex_fecha_e.Text = DateTime.Now.ToString("yyyy-MM-dd");
+                //Txt_fecha.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
             
         }

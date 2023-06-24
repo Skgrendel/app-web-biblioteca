@@ -32,7 +32,7 @@ namespace Web_biblioteca
         }
         void script()
         {
-            ms_error.Visible = true;
+           
             string script = @"window.setTimeout(function() {
                  document.getElementById('" + ms_error.ClientID + @"').style.display = 'none';
                  }, 4000);";
@@ -56,18 +56,22 @@ namespace Web_biblioteca
         private void fnt_registrar_lib() 
         {
             Cls_registrar_lib registrar_Lib = new Cls_registrar_lib();
+            registrar_Lib.fnt_validar(txt_isbn.Text);
+
            
-            if (registrar_Lib.getExistencia()>0)
+            if (registrar_Lib.getExistencia()==1)
             {
-               lbl_mensaje.Text = registrar_Lib.getMensaje();
+                ms_error.Visible = true;
+                lbl_mensaje.Text = registrar_Lib.getMensaje();
                 script();
                 
             }
-            else
+
+            if (registrar_Lib.getExistencia() == 0)          
             {
-                registrar_Lib.fnt_crear(txt_isbn.Text, Txt_nombre.Text, Txt_autor.Text, Txt_editorial.Text, Convert.ToInt16(Txt_n_paginas.Text), cbx_estado.SelectedValue, Txt_genero.Text, Txt_f_publicacion.Text, Convert.ToInt16(Txt_cantidad.Text), Txt_descripcion.Text);
-                lbl_mensaje.Text = registrar_Lib.getMensaje();
                 script();
+                registrar_Lib.fnt_crear(txt_isbn.Text, Txt_nombre.Text, Txt_autor.Text, Txt_editorial.Text, Convert.ToInt16(Txt_n_paginas.Text), cbx_estado.SelectedValue, Txt_genero.Text, Txt_f_publicacion.Text, Convert.ToInt16(Txt_cantidad.Text), Txt_descripcion.Text);
+                lbl_mensaje.Text = registrar_Lib.getMensaje();               
                 limpiar();
             }
             

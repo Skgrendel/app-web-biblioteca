@@ -85,6 +85,7 @@
     <Compile Include="Conexion\Cls_conexion.cs" />
     <Compile Include="Datos\Cls_consultar_lib.cs" />
     <Compile Include="Datos\Cls_consultar_user.cs" />
+    <Compile Include="Datos\Cls_editar_lib.cs" />
     <Compile Include="Datos\Cls_mostrar_es.cs" />
     <Compile Include="Datos\Cls_prestamos_lib.cs" />
     <Compile Include="Datos\Cls_registrar_lib.cs" />
