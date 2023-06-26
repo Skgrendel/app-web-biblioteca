@@ -57,6 +57,7 @@ namespace Web_biblioteca
                 Txt_n_paginas.Text = "0";
                 cbx_estado.SelectedIndex = 0;
                 txt_busqueda.Focus();
+                ms_error.Visible= false;
             }
 
        
@@ -116,6 +117,7 @@ namespace Web_biblioteca
             Txt_cantidad.Enabled = true;
             Txt_descripcion.Enabled = true;
             Btn_editar.Enabled = true;
+            CargarEstados();
         }
 
         void inahilitar()
@@ -164,6 +166,12 @@ namespace Web_biblioteca
                 ms_error.Visible = false;
             }
             
+        }
+       
+
+        protected void Bnt_limpiar_Click(object sender, EventArgs e)
+        {
+            limpiar();  
         }
     }
 }

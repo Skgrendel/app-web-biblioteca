@@ -52,6 +52,7 @@ namespace Web_biblioteca
             Txt_n_paginas.Text = "0";
             cbx_estado.SelectedIndex = 0;
             txt_isbn.Focus();   
+            ms_error.Visible = false;
         }
         private void fnt_registrar_lib() 
         {

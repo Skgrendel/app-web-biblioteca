@@ -42,6 +42,15 @@ namespace Web_biblioteca
         protected global::System.Web.UI.WebControls.Button btn_buscar;
 
         /// <summary>
+        /// Control Bnt_limpiar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Bnt_limpiar;
+
+        /// <summary>
         /// Control Btn_editar.
         /// </summary>
         /// <remarks>

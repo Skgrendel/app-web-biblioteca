@@ -24,8 +24,8 @@ namespace Web_biblioteca
             txt_correo.Text = string.Empty;
             txt_contacto.Text = string.Empty;
             txt_direccion.Text = string.Empty;
-            //lbl_mensaje.Text = string.Empty;
-            //ms_error.Visible = false;
+            lbl_mensaje.Text = string.Empty;
+            ms_error.Visible = false;
             txt_id.Focus();
 
         }
