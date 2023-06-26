@@ -46,7 +46,7 @@ namespace Web_biblioteca
         }
        
             void limpiar()
-            {                
+            {   txt_busqueda.Text= string.Empty;
                 Txt_autor.Text = string.Empty;
                 Txt_cantidad.Text = "0";
                 Txt_descripcion.Text = string.Empty;
@@ -58,7 +58,9 @@ namespace Web_biblioteca
                 cbx_estado.SelectedIndex = 0;
                 txt_busqueda.Focus();
                 ms_error.Visible= false;
-            }
+                Cb_editar.Enabled = false;
+                inahilitar();
+        }
 
        
         private void fnt_consultar()
@@ -134,6 +136,7 @@ namespace Web_biblioteca
             Txt_cantidad.Enabled = false;
             Txt_descripcion.Enabled = false;            
             Btn_editar.Enabled = false;
+           
         }
 
         protected void Btn_editar_Click(object sender, EventArgs e)
