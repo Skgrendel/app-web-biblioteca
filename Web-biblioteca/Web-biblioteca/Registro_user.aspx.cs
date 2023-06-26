@@ -37,13 +37,16 @@ namespace Web_biblioteca
                  document.getElementById('" + ms_error.ClientID + @"').style.display = 'none';
                  }, 4000);";
                     ScriptManager.RegisterStartupScript(this, GetType(), "HideErrorPanel", script, true); // Ocultar el panel de error después de 3 segundos
-                    fnt_cancelar();
+                   
         } 
 
         void fnt_registrar()
         {
             Cls_registrar_us registrar_Us = new Cls_registrar_us();
-            if (registrar_Us.getExistencia() > 0)
+            registrar_Us.fnt_crear(txt_id.Text, txt_nombre.Text, txt_apellido.Text, txt_contacto.Text, txt_direccion.Text, txt_correo.Text);
+          
+
+            if (registrar_Us.getExistencia() < 0)
             {
                 lbl_mensaje.Text = registrar_Us.getMensaje();
                 script();
@@ -53,20 +56,19 @@ namespace Web_biblioteca
                 registrar_Us.fnt_crear(txt_id.Text, txt_nombre.Text, txt_apellido.Text, txt_contacto.Text, txt_direccion.Text, txt_correo.Text);
                 lbl_mensaje.Text = registrar_Us.getMensaje();
                 script();
-                fnt_cancelar();
+               
 
             }
         }
-        protected void Btn_registrar_Click(object sender, EventArgs e)
-        {
-
-            fnt_registrar();
-           
-            
-        }
+       
         protected void Btn_cancelar_Click(object sender, EventArgs e)
         {
             fnt_cancelar();
+        }
+
+        protected void Btn_registrar_Click1(object sender, EventArgs e)
+        {
+            fnt_registrar();
         }
     }
 }

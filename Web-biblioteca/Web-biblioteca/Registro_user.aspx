@@ -67,7 +67,7 @@
           <div><asp:Label ID="Label6" runat="server" Text="Correo" class="form-label mb-2"></asp:Label></div>
           <asp:TextBox ID="txt_correo" class="form-control"  runat="server"></asp:TextBox></div>
       <div class="mt-2">
-          <asp:Button ID="Btn_registrar" runat="server" class="btn btn-outline-success" Text="Registrarse"  OnClick="Btn_registrar_Click" />
+          <asp:Button ID="Btn_registrar" runat="server" class="btn btn-outline-success" Text="Registrarse"  Onclick="Btn_registrar_Click1" />
            <asp:Button ID="Btn_cancelar" runat="server" class="btn btn-outline-success" Text="Cancelar" OnClick="Btn_cancelar_Click" />
       </div> 
   </div>

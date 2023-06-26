@@ -8,6 +8,6 @@ namespace Web_biblioteca.Conexion
 {
     public class Cls_conexion
     {
-        public SqlConnection con = new SqlConnection("Data Source=localhost;Initial Catalog=dbs_biblioteca;Integrated Security=True");
+        public SqlConnection con = new SqlConnection("Data Source=MABAPRRATFSD017\\DARIEL;Initial Catalog=dbs_biblioteca;Integrated Security=True");
     }
 }

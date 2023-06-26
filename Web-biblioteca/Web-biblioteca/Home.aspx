@@ -40,13 +40,13 @@
        <%-- Carrusel de imagenes--%>
 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="10000">
+    <div class="carousel-item active" data-bs-interval="3000">
       <img src="image/01.jpg" class="d-block w-100" alt="..."/>
     </div>
-    <div class="carousel-item" data-bs-interval="2000">
+    <div class="carousel-item" data-bs-interval="3000">
       <img src="image/02.jpg" class="d-block w-100" alt="..."/>
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item"  data-bs-interval="4000">
       <img src="image/03.jpg" class="d-block w-100" alt="..."/>
     </div>
   </div>
