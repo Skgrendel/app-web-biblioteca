@@ -59,6 +59,7 @@ namespace Web_biblioteca
                 txt_busqueda.Focus();
                 ms_error.Visible= false;
                 Cb_editar.Enabled = false;
+                 Cb_editar.Checked = false;
                 inahilitar();
         }
 

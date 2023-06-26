@@ -35,6 +35,9 @@
         <li class="nav-item">
           <a class="nav-link " href="Prestamos.aspx">Prestamo de Libros</a>
         </li>
+           <li class="nav-item">
+          <a class="nav-link " href="Devolucion.aspx">Devolucion de Libros</a>
+        </li>
       </ul>
     </div>
   </div>    
@@ -49,7 +52,7 @@
     <div class="col">
       <div class="card" style="width: 40rem;">
   <div class="card-header text-center">
-   Busqueda de libros
+   Registros de libros
   </div>
   <div class="card-body">      
     <div class="col mb-2 offset-1">  

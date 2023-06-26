@@ -35,6 +35,9 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="Prestamos.aspx">Prestamo de Libros</a>
         </li>
+           <li class="nav-item">
+          <a class="nav-link " href="Devolucion.aspx">Devolucion de Libros</a>
+        </li>
       </ul>
     </div>
   </div>    

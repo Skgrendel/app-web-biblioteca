@@ -12,8 +12,8 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"/>
 </head>
 
-<body>
-    <form id="form1" runat="server">
+<body >
+    <form id="form1" runat="server" >
        <div>
              <%-- navegador de la pagina--%>
         <div class="Nav nav-pills mb-3">
@@ -35,6 +35,9 @@
         </li>
         <li class="nav-item">
           <a class="nav-link " href="Prestamos.aspx">Prestamo de Libros</a>
+        </li>
+           <li class="nav-item">
+          <a class="nav-link " href="Devolucion.aspx">Devolucion de Libros</a>
         </li>
       </ul> 
     </div>
